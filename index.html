@@ -11,15 +11,14 @@
 <body>
     <script>
         for (var i = 1; i <= 100; i++) {
-            if ((i % 3 == 0) && (i % 5 == 0)) {
-                console.log(i, 'Sphinx Software!');
-            } else if (i % 5 == 0) {
-                console.log(i, 'Software!')
-            } else if (i % 3 == 0) {
-                console.log(i, 'Sphinx!')
-            } else {
-                console.log(i)
-            }
+            let number = (((i % 3 == 0) && (i % 5 == 0))) ? 'Sphinx Software!'
+                : (i % 5 == 0) ? 'Software!'
+                    : (i % 3 == 0) ? 'Sphinx!'
+                        : '';
+            console.log(i, number);
+            // document.write(i, " ", number);
+            document.write(`${i} ${number}`);
+            document.write("<br>");
         }
     </script>
 </body>
